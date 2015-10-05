@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/ubuntu2/Downloads'
+let g:netrw_dirhist_2='/home/ming/.vim/plugged/YouCompleteMe/autoload'
+let g:netrw_dirhist_3='/home/ming/.vim/plugged'
+let g:netrw_dirhist_4='/home/ming'
+let g:netrw_dirhist_5='/home/ming/.android'
