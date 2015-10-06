@@ -7,6 +7,7 @@ nmap <leader>a :echo("\<leader\> works! It is set to <leader>")<CR>
 "map ,r to find current file in NERDTree
 map <leader>r :NERDTreeFind<cr>
 "map F3 to toggle NERDTree
+
 nmap <silent> <F3> :NERDTreeToggle <cr>
 "always show bookmarks
 "let NERDTreeShowBookmarks=1
