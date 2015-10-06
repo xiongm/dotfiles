@@ -1,7 +1,7 @@
 Summary
 ===========
 
-These are my personal dotfiles. feel free to steal if you find them useful
+These are my personal dotfiles. feel free to use if you find them useful
 
 ```console
 $ cd ~/

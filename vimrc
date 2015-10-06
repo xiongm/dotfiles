@@ -58,6 +58,8 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 
 "automatically displays all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
+"change vim airline theme
+"let g:airline_theme='solarized'
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
@@ -89,26 +91,74 @@ map <CR> o<ESC>
 " without entering insert mode
 map <S-CR> O<ESC>
 
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+
 "vim-plug sections
 call plug#begin()
 
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
-
-
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-fugitive'
+"Extra steps to get this plugin to work
+"1.Install node and npm
+" 1.1sudo apt-get install npm 
+"2.Install tern with npm
+" 2.1 cd .vim/plugged/tern_for_vim && npm install
+"3.Make a soft link to node. Tern uses node
+"  to start tern server, but on ubuntu 14.04
+"  node doesn't exist, only nodejs, so you
+"  need to create one
+" 3.1 sudo ln -sf /usr/bin/nodejs /usr/bin/node
+"4.Create .tern-project file
+"{
+"  "libs": [
+"    "browser",
+"    "underscore",
+"    "jquery"
+"  ],
+"  "plugins": {
+"  }
+"}
+"
+Plug 'marijnh/tern_for_vim'
+Plug 'Raimondi/delimitMate'
+"use <Leader>y, to trigger
+Plug 'mattn/emmet-vim'
 call plug#end()
+
 
 "override LineNr color scheme in color shceme file
 "only effective when number line is enabled
 hi LineNr ctermfg=Grey ctermbg=DarkBlue
 
+"Quick vim cheat sheat
+"a - append after cursor
+"J - join line below to the current line
+". - repeat last command
+"o - in NORMAL mode, go to the next line
+
 
 "Useful vim commands for my reference
-"Insert Mode,Ctrl+Shift+V => copy from system clipboard
+"1.copy from system clipboard
+"  1.1 Insert Mode,Ctrl+Shift+V 
+"2.comment multiple lines
+"  2.1 Ctrl+V to select
+"  2.2 Shift + I + <your comment character>
+"  2.3 exit insert mode, it will be there
+"3.comment multiple lines alternative
+"  3.1 Ctrl+V to select
+"  3.2 s/^/<your comment character>/g
+"
+
