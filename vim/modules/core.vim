@@ -46,10 +46,6 @@ map <CR> o<ESC>
 " without entering insert mode
 map <S-CR> O<ESC>
 
-set path+=/home/ming/projects/legacy/titeam/trunk/cpp/include
-
-
-
 "Quick vim cheat sheat
 "a - append after cursor
 "J - join line below to the current line
