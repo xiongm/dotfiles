@@ -43,4 +43,8 @@ Plug 'xolox/vim-session'
 Plug 'kana/vim-altr'
 Plug 'ervandew/supertab'
 Plug 'mileszs/ack.vim'
+" ctags management
+" important notice
+" if no tags need to be generated
+" touch a .notags file in the root
 Plug 'ludovicchabant/vim-gutentags'

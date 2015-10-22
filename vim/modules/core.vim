@@ -1,15 +1,3 @@
-
-"change default <leader> key to ',' 
-let mapleader=","
-
-"map ,a to test if leader works
-nmap <leader>a :echo("\<leader\> works! It is set to <leader>")<CR>
-
-
-"map ,h to disable the hlsearch
-"used in conjunction with set hlsearch
-nmap <silent> ,h :nohlsearch<cr>
-
 set expandtab
 set shiftwidth=2
 set softtabstop=2
@@ -38,13 +26,6 @@ set background=dark
 "directory of current file
 autocmd BufEnter * lcd %:p:h
 
-
-" map Enter to break the line
-" without entering insert mode
-map <CR> o<ESC>
-" map S+Enter to break the line
-" without entering insert mode
-map <S-CR> O<ESC>
 
 "Quick vim cheat sheat
 "a - append after cursor
