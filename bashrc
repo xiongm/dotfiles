@@ -1,3 +1,31 @@
+###COLORS###
+
+BLACK='\e[0;30m'
+BLUE='\e[0;34m'
+GREEN='\e[0;32m'
+CYAN='\e[0;36m'
+RED='\e[0;31m'
+PURPLE='\e[0;35m'
+BROWN='\e[0;33m'
+LIGHTGRAY='\e[0;37m'
+DARKGRAY='\e[1;30m'
+LIGHTBLUE='\e[1;34m'
+LIGHTGREEN='\e[1;32m'
+LIGHTCYAN='\e[1;36m'
+LIGHTRED='\e[1;31m'
+MAGENTA='\e[1;35m'
+YELLOW='\e[1;33m'
+LIGHTYELLOW='\e[0;33m'
+WHITE='\e[1;37m'
+NC='\e[0m' # No Color
+
+### WELCOME SCREEN ###
+echo -ne "Hello, ${LIGHTBLUE}$USER${NC}. today is, "; date
+echo -ne "${BLUE}Sysinfo:";uptime ;
+#echo -ne "${NC}"; cal ;
+echo -ne "${NC}";
+
+
 if [ -e /lib/terminfo/x/xterm-256color ]; then
   export TERM='xterm-256color'
 else
@@ -65,6 +93,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 alias em='emacs -nw'
 export EDITOR=vim

@@ -1,10 +1,14 @@
 "change default <leader> key to ',' 
 let mapleader=","
 
-"map ,a to test if leader works
-nmap <leader>a :echo("\<leader\> works! It is set to <leader>")<CR>
-
-
+"map tn to new tab
+nmap tn :tabnew<cr>
+"map td to close tab
+nmap td :tabclose<cr>
+"H to move to previous tab 
+nnoremap H gT
+"L to move to next tab
+nnoremap L gt
 
 "map ,h to disable the hlsearch
 "used in conjunction with set hlsearch
@@ -28,3 +32,7 @@ imap <F2> <Esc>:w<CR>a
 nmap <Ctrl-s> :w<CR>
 imap <Ctrl-s> <Esc>:w<CR>a
 
+" in insert mode, insert a semi colon at
+" the end of line. <C-o> here is used
+" to input a single normal mode command
+inoremap <leader>; <C-o>A;
