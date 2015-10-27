@@ -36,3 +36,7 @@ imap <Ctrl-s> <Esc>:w<CR>a
 " the end of line. <C-o> here is used
 " to input a single normal mode command
 inoremap <leader>; <C-o>A;
+
+" copy and cut
+vmap <C-c> "+yi<ESC>
+vmap <C-x> "+c<ESC>
