@@ -1,3 +1,6 @@
+" to keep sync with your update  do 
+" ln -s ~/dotfiles/local/vimrc_local.home.ubuntu ~/.vimrc_local
+
 if has('gui_running')
   set guifont=Monospace\ 13
 endif
