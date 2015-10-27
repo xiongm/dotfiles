@@ -1,0 +1,18 @@
+set path+=/home/mxiong/repo/titeam/trunk/cpp/include                                                                          
+set path+=/home/mxiong/repo/q/trunk/include
+set path+=/home/mxiong/repo/cubit/trunk/include
+
+if has('gui_running')
+  set guifont=Courier\ 13
+  set guioptions-=T
+endif
+
+let g:seoul256_background=235
+colo seoul256
+
+
+let g:NERDTreeDirArrows=0
+let g:ack_default_options = " -H --nocolor --nogroup -G '^(?!.*(tests|UnitTest)/.*).*$' "
+let g:ack_default_options = " -H --nocolor --nogroup "
+
+command! -bang -nargs=* -complete=file MyAck           call ack#Ack('grep<bang>', <q-args>)
