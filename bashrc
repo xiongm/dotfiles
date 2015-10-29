@@ -58,11 +58,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@charleston\[\033[00m\]:\[\033[01;34m\]\w$RED\$(parse_git_branch)\[\033[00m\]\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@($HOSTNAME)\[\033[00m\]:\[\033[01;34m\]\w$RED\$(parse_git_branch)\[\033[00m\]\$ '
 
-    PS1="$NO_COLOR\u@charleston$NO_COLOR:\w$RED\$(parse_git_branch)$NO_COLOR\$ "
+    PS1="$NO_COLOR\u@$HOSTNAME$NO_COLOR:\w$RED\$(parse_git_branch)$NO_COLOR\$ "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@charleston:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@$HOSTNAME:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
