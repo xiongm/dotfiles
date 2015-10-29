@@ -40,3 +40,9 @@ inoremap <leader>; <C-o>A;
 " copy and cut
 vmap <C-c> "+yi<ESC>
 vmap <C-x> "+c<ESC>
+
+" Ctrl-e to move the end of line in insert mode
+inoremap <C-e> <C-o>$
+" Ctrl-a to move the the first non blank text of the line in insert mode
+inoremap <C-a> <C-o>^
+
