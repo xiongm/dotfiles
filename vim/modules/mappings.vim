@@ -45,4 +45,8 @@ vmap <C-x> "+c<ESC>
 inoremap <C-e> <C-o>$
 " Ctrl-a to move the the first non blank text of the line in insert mode
 inoremap <C-a> <C-o>^
+" end of line in normal mode
+nnoremap <C-e> $
+" non blank text of line in normal mode
+nnoremap <C-a> ^
 
