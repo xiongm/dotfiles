@@ -48,3 +48,4 @@ Plug 'mileszs/ack.vim'
 " if no tags need to be generated
 " touch a .notags file in the root
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'terryma/vim-multiple-cursors'
