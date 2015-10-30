@@ -10,6 +10,9 @@ set cursorline
 set incsearch
 "enable search highlight
 set hlsearch
+"confirm file save instead of unsuccesful
+"quit
+set confirm
 
 colo solarized
 

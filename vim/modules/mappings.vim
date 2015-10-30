@@ -1,6 +1,10 @@
 "change default <leader> key to ',' 
 let mapleader=","
 
+"unmap Q currently mapped to ex mode
+"its very annoying
+map Q <Nop>
+
 "map tn to new tab
 nmap tn :tabnew<cr>
 "map td to close tab
@@ -50,3 +54,8 @@ nnoremap <C-e> $
 " non blank text of line in normal mode
 nnoremap <C-a> ^
 
+" exit vim emacs way
+nnoremap <C-x><C-c> :qa<CR>
+inoremap <C-x><C-c> <ESC>:qa<CR>
+" exit current window
+nnoremap <leader>q :q<CR>
