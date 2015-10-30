@@ -59,3 +59,5 @@ nnoremap <C-x><C-c> :qa<CR>
 inoremap <C-x><C-c> <ESC>:qa<CR>
 " exit current window
 nnoremap <leader>q :q<CR>
+
+nnoremap <leader>sv :so $MYVIMRC<CR>
