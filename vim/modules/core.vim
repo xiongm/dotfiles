@@ -20,6 +20,7 @@ if has('gui_running')
 else
   " use degraded 256 colorscheme for term use
   let g:solarized_termcolors=256
+  set guioptions+=c
 endif
 
 set background=dark
