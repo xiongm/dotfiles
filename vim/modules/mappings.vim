@@ -57,7 +57,29 @@ nnoremap <C-a> ^
 " exit vim emacs way
 nnoremap <C-x><C-c> :qa<CR>
 inoremap <C-x><C-c> <ESC>:qa<CR>
+" save current buffer
+nnoremap <C-x><C-w> :w<CR>
+inoremap <C-x><C-w> <ESC>:w<CR>
 " exit current window
 nnoremap <leader>q :q<CR>
 
-nnoremap <leader>sv :so $MYVIMRC<CR>
+" source vimrc file
+nnoremap <leader>v :so $MYVIMRC<CR>
+
+"when popup menu is visible, the white space will
+"simply select the highlighted menu
+"helps tab auto-completion
+inoremap <expr> <Space> pumvisible() ? "\<C-y>" : " "
+
+
+"ctrl+kjhl navigation between windows
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+"resize window using Alt + arrow
+nmap <silent> <A-Up> <C-W>+
+nmap <silent> <A-Down> <C-W>-
+nmap <silent> <A-Left> <C-W><
+nmap <silent> <A-Right> <C-W>>
