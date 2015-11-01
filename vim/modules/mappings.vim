@@ -66,6 +66,9 @@ nnoremap <leader>q :q<CR>
 " source vimrc file
 nnoremap <leader>v :so $MYVIMRC<CR>
 
+"select all
+nnoremap <leader>a ggVG
+
 "when popup menu is visible, the white space will
 "simply select the highlighted menu
 "helps tab auto-completion
@@ -83,3 +86,5 @@ nmap <silent> <A-Up> <C-W>+
 nmap <silent> <A-Down> <C-W>-
 nmap <silent> <A-Left> <C-W><
 nmap <silent> <A-Right> <C-W>>
+
+nmap <F4> :OpenSession<Space>

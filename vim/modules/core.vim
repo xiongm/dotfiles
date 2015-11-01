@@ -36,6 +36,8 @@ autocmd BufEnter * lcd %:p:h
 "J - join line below to the current line
 ". - repeat last command
 "o - in NORMAL mode, go to the next line
+"G - end of file
+"gg - beginning of file
 
 
 "Useful vim commands for my reference

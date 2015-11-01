@@ -7,3 +7,5 @@ let g:session_persist_font = 0
 " disable all session locking
 let g:session_lock_enabled = 0
 set sessionoptions-=buffers
+" default to last session used
+let g:session_default_to_last = 1
