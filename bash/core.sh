@@ -20,11 +20,7 @@ WHITE='\e[1;37m'
 NO_COLOR='\e[0m' # No Color
 
 
-if [ -e /lib/terminfo/x/xterm-256color ]; then
-  export TERM='xterm-256color'
-else
-  export TERM='xterm-color'
-fi
+export TERM='xterm-256color'
 
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -48,36 +44,12 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@($HOSTNAME)\[\033[00m\]:\[\033[01;34m\]\w$RED\$(parse_git_branch)\[\033[00m\]\$ '
-
     PS1="$NO_COLOR\u@$HOSTNAME$NO_COLOR:\w$RED\$(parse_git_branch)$NO_COLOR\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@$HOSTNAME:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -87,6 +59,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 alias em='emacs -nw'
+alias v='vim'
 export EDITOR=vim
 
 

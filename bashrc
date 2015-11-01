@@ -10,7 +10,7 @@ done
   
 
 #--------------------------------------------------
-#    WELCOME SCREEN
+#WELCOME SCREEN
 #--------------------------------------------------
 echo -ne "Hello, ${LIGHTBLUE}$USER${NO_COLOR}. today is "; date
 echo -ne "${BLUE}Sysinfo:";uptime ;
