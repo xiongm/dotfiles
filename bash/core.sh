@@ -28,12 +28,10 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
 force_color_prompt=yes
-
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
@@ -46,9 +44,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="$NO_COLOR\u@$HOSTNAME$NO_COLOR:\w$RED\$(parse_git_branch)$NO_COLOR\$ "
+    PS1="$RED$BLUE\u@\h$NO_COLOR:\w$RED\$(parse_git_branch)$NO_COLOR\$ "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@$HOSTNAME:\w\$ '
+    PS1='\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
