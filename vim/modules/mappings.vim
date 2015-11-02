@@ -86,8 +86,10 @@ nmap <silent> <A-Right> <C-W>>
 
 nmap <F4> :OpenSession<Space>
 
-"paste yanked text to command line with 
-"global replace syntax
+"place cusor on any word, and press
+"<leader>g will put that word to 
+"command line with global replace
+"syntax 
 vmap <leader>g :%s/<C-R><C-W>/
 map  <leader>g :%s/<C-R><C-W>/
 
