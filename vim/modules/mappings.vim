@@ -40,6 +40,8 @@ imap <Ctrl-s> <Esc>:w<CR>a
 " the end of line. <C-o> here is used
 " to input a single normal mode command
 inoremap <leader>; <C-o>A;
+" quick way to insert ; for normal mode
+nnoremap <leader>; A;<ESC>
 
 " copy and cut
 vmap <C-c> "+yi<ESC>
@@ -62,18 +64,13 @@ nnoremap <C-x><C-w> :w<CR>
 inoremap <C-x><C-w> <ESC>:w<CR>
 " exit current window
 nnoremap <leader>q :q<CR>
+nnoremap <leader>qa :qa<CR>
 
 " source vimrc file
 nnoremap <leader>v :so $MYVIMRC<CR>
 
 "select all
 nnoremap <leader>a ggVG
-
-"when popup menu is visible, the white space will
-"simply select the highlighted menu
-"helps tab auto-completion
-inoremap <expr> <Space> pumvisible() ? "\<C-y>" : " "
-
 
 "ctrl+kjhl navigation between windows
 nmap <silent> <C-h> :wincmd h<CR>
@@ -93,3 +90,14 @@ nmap <F4> :OpenSession<Space>
 "global replace syntax
 vmap <leader>g :%s/<C-R>//
 map  <leader>g :%s/<C-R>//
+
+" DISABLED 
+
+"when popup menu is visible, the white space will
+"simply select the highlighted menu
+"helps tab auto-completion
+"Note: this doesn't seem to work very well w/
+"YouCompleteMe. So disable it for now
+"inoremap <expr> <Space> pumvisible() ? "\<C-y>" : " "
+
+
