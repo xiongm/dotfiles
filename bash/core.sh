@@ -21,6 +21,8 @@ NO_COLOR='\e[0m' # No Color
 
 
 export TERM='xterm-256color'
+export EDITOR=vim
+eval `dircolors ~/.dircolors`
 
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -50,17 +52,3 @@ else
 fi
 unset color_prompt force_color_prompt
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-
-alias em='emacs -nw'
-alias v='vim'
-export EDITOR=vim
-
-
-eval `dircolors ~/.dircolors`

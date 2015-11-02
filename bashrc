@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ -e ~/.bash ] || echo "no $HOME/.bash exists"
+[ -d ~/.bash ] || echo "Warning: no $HOME/.bash exists! Did you create symbolic link?" 
 
 for script in ~/.bash/*.sh
 do
@@ -12,6 +12,6 @@ done
 #--------------------------------------------------
 #WELCOME SCREEN
 #--------------------------------------------------
-echo -ne "Hello, ${LIGHTBLUE}$USER${NO_COLOR}. today is "; date
+echo -ne "Hello,${LIGHTBLUE}$USER${NO_COLOR}. Today is "; date
 echo -ne "${BLUE}Sysinfo:";uptime ;
 echo -ne "${NO_COLOR}";
