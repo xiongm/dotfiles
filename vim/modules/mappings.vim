@@ -88,8 +88,8 @@ nmap <F4> :OpenSession<Space>
 
 "paste yanked text to command line with 
 "global replace syntax
-vmap <leader>g :%s/<C-R>//
-map  <leader>g :%s/<C-R>//
+vmap <leader>g :%s/<C-R><C-W>/
+map  <leader>g :%s/<C-R><C-W>/
 
 " DISABLED 
 
