@@ -14,7 +14,6 @@ done
 #--------------------------------------------------
 if [[ $- == *i* ]]
 then
-  echo -ne "Hello,${LIGHTBLUE}$USER${NO_COLOR}. Today is "; date
-  echo -ne "${BLUE}Sysinfo:";uptime ;
-  echo -ne "${NO_COLOR}";
+  echo -ne "Hello,$USER. Today is "; date
+  echo -ne "Sysinfo:";uptime ;
 fi
