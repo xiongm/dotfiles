@@ -6,9 +6,9 @@ let mapleader=","
 map Q <Nop>
 
 "map tn to new tab
-nmap tn :tabnew<cr>
+nmap <leader>tn :tabnew<cr>
 "map td to close tab
-nmap td :tabclose<cr>
+nmap <leader>td :tabclose<cr>
 "H to move to previous tab 
 nnoremap H gT
 "L to move to next tab
