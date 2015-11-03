@@ -14,13 +14,14 @@ set hlsearch
 "quit
 set confirm
 
+
 colo solarized
 
 if has('gui_running')
+  set guioptions+=c
 else
   " use degraded 256 colorscheme for term use
   let g:solarized_termcolors=256
-  set guioptions+=c
 endif
 
 set background=dark
