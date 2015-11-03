@@ -7,7 +7,11 @@ do
   [ -x "$script" ] || continue
   source $script
 done
-  
+
+if [ -e ~/.bashrc_local ]
+then
+  source ~/.bashrc_local
+fi
 
 #--------------------------------------------------
 #WELCOME SCREEN
