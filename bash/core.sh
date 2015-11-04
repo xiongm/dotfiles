@@ -44,7 +44,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="$RED$BLUE\u@\h$NO_COLOR:\w$RED\$(parse_git_branch)$NO_COLOR\$ "
+    PS1="$RED$YELLOW\u@\h$NO_COLOR:\w$RED\$(parse_git_branch)$NO_COLOR\$ "
 else
     PS1='\u@\h:\w\$ '
 fi
