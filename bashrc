@@ -12,6 +12,9 @@ done
 #--------------------------------------------------
 #WELCOME SCREEN
 #--------------------------------------------------
-echo -ne "Hello,${LIGHTBLUE}$USER${NO_COLOR}. Today is "; date
-echo -ne "${BLUE}Sysinfo:";uptime ;
-echo -ne "${NO_COLOR}";
+if [[ $- == *i* ]]
+then
+  echo -ne "Hello,${LIGHTBLUE}$USER${NO_COLOR}. Today is "; date
+  echo -ne "${BLUE}Sysinfo:";uptime ;
+  echo -ne "${NO_COLOR}";
+fi
