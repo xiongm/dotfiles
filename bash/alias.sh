@@ -13,3 +13,7 @@ alias .....='cd ../../../..'
 alias mkdir='mkdir -pv'
 
 alias ports='netstat -tulanp'
+
+alias df='df -Tha --total'
+alias du='du -ach | sort -h'
+alias ps='ps auxf'
