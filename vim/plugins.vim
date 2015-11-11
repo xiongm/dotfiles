@@ -50,3 +50,5 @@ Plug 'mileszs/ack.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/vimproc.vim',{ 'do': 'make' }
 Plug 'Shougo/vimshell.vim'
+Plug 'justmao945/vim-clang'
+
