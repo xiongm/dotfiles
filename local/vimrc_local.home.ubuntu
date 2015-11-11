@@ -4,3 +4,11 @@
 if has('gui_running')
   set guifont=Monospace\ 13
 endif
+
+
+let g:loaded_youcompleteme = 0
+let g:marching_include_paths = filter(
+      \ split(glob('/usr/include/c++/*'), '\n') +
+      \ split(glob('/usr/include/*/c++/*'), '\n') +
+      \ split(glob('/usr/include/*/'), '\n'),
+      \ 'isdirectory(v:val)')
