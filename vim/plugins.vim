@@ -1,7 +1,6 @@
 " This is the main plugin list, sourced by modules/plugins.vim
 " Configuration goes in the appropriate modules/plugins/*.vim file.
 
-Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
@@ -51,4 +50,5 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/vimproc.vim',{ 'do': 'make' }
 Plug 'Shougo/vimshell.vim'
 Plug 'justmao945/vim-clang'
+Plug 'Shougo/neocomplete.vim'
 

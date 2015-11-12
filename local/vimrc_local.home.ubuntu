@@ -1,14 +1,43 @@
-" to keep sync with your update  do 
-" ln -s ~/dotfiles/local/vimrc_local.home.ubuntu ~/.vimrc_local
-
 if has('gui_running')
-  set guifont=Monospace\ 13
+  set guifont=Courier\ 13
+  set guioptions-=T
+endif
+"let g:SuperTabCrMapping=0
+"let g:seoul256_background=235
+"colo seoul256
+let g:loaded_youcompleteme = 0
+
+let g:NERDTreeDirArrows=0
+let g:ack_default_options = " -H --nocolor --nogroup -G '^(?!.*(tests|UnitTest)/.*).*$' "
+
+
+
+let g:ack_default_options = " -H --nocolor --nogroup "
+"when popup menu is visible, the white space will
+"simply select the highlighted menu
+inoremap <expr> <Space> pumvisible() ? "\<C-y>" : " "
+
+
+let g:clang_exec = 'clang'
+
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : neocomplete#start_manual_complete()
+
+"disable auto completion for vim-clang
+let g:clang_auto = 0
+" default 'longest' can not work with neocomplete
+let g:clang_c_completeopt = 'menuone,preview'
+let g:clang_cpp_completeopt = 'menuone,preview'
+
+" use neocomplete
+" input patterns
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
 endif
 
-
-let g:loaded_youcompleteme = 0
-let g:marching_include_paths = filter(
-      \ split(glob('/usr/include/c++/*'), '\n') +
-      \ split(glob('/usr/include/*/c++/*'), '\n') +
-      \ split(glob('/usr/include/*/'), '\n'),
-      \ 'isdirectory(v:val)')
+" for c and c++
+let g:neocomplete#force_omni_input_patterns.c =  '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:neocomplete#force_omni_input_patterns.cpp =  '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
