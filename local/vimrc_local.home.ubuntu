@@ -17,9 +17,3 @@ let g:ack_default_options = " -H --nocolor --nogroup "
 "simply select the highlighted menu
 "inoremap <expr> <Space> pumvisible() ? "\<C-y>" : " "
 
-
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-
