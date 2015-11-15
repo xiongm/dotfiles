@@ -109,6 +109,9 @@ nmap  <leader>g :%s/<C-R><C-W>/
 "close quicklist window
 nnoremap <leader>cq :ccl<CR>
 
+"shortcut to edit this file
+:command EditMyMapping :e ~/.vim/modules/mappings.vim
+
 " DISABLED 
 
 "when popup menu is visible, the white space will
