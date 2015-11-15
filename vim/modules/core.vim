@@ -31,6 +31,9 @@ set background=dark
 "directory of current file
 autocmd BufEnter * lcd %:p:h
 
+"we need vim-snippets but we don't want to use
+"the snippets that come with it
+let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
 
 "Quick vim cheat sheat
 "a - append after cursor
