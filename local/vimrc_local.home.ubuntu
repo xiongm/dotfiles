@@ -7,6 +7,9 @@ endif
 "colo seoul256
 let g:loaded_youcompleteme = 0
 
+"set background=dark
+"colo mango
+
 let g:NERDTreeDirArrows=0
 let g:ack_default_options = " -H --nocolor --nogroup -G '^(?!.*(tests|UnitTest)/.*).*$' "
 

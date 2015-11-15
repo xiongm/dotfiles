@@ -26,10 +26,6 @@ map <CR> o<ESC>
 " without entering insert mode
 map <S-CR> O<ESC>
 
-" map F2 to save the file in normal mode
-nmap <F2> :w<CR>
-imap <F2> <Esc>:w<CR>a
-
 " map Ctrl-s to save file. this might not 
 " work due to c-s mapped to other system
 " functions
@@ -84,7 +80,24 @@ nmap <silent> <A-Down> <C-W>-
 nmap <silent> <A-Left> <C-W><
 nmap <silent> <A-Right> <C-W>>
 
+" map F2 to save the file in normal mode
+nmap <F2> :w<CR>
+imap <F2> <Esc>:w<CR>
+"NERDTree
+nmap <silent> <F3> :NERDTreeToggle <cr>
+"vim-session 
 nmap <F4> :OpenSession<Space>
+"search word at current cursor
+nmap <F5> :Ack<Space><C-R><C-W>
+"tagbar
+nmap <F8> :TagbarToggle<CR>
+"an alternative way to toggle tagbar
+nmap <leader>ot :TagbarToggle<CR>
+
+
+
+"map ,r to find current file in NERDTree
+map <leader>r :NERDTreeFind<cr>
 
 "place cusor on any word, and press
 "<leader>g will put that word to 
@@ -92,6 +105,9 @@ nmap <F4> :OpenSession<Space>
 "syntax 
 vmap <leader>g :s/<C-R><C-W>/
 nmap  <leader>g :%s/<C-R><C-W>/
+
+"close quicklist window
+nnoremap <leader>cq :ccl<CR>
 
 " DISABLED 
 
