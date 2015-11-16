@@ -106,11 +106,14 @@ map <leader>r :NERDTreeFind<cr>
 vmap <leader>g :s/<C-R><C-W>/
 nmap  <leader>g :%s/<C-R><C-W>/
 
+"open quicklist window
+nnoremap <leader>co :Copen<CR>
 "close quicklist window
 nnoremap <leader>cq :ccl<CR>
 
 "shortcut to edit this file
 :command! EditMyMapping :e ~/.vim/modules/mappings.vim
+:command! EditMyPlugin :e ~/.vim/plugins.vim
 
 "open definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
