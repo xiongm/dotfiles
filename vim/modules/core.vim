@@ -15,11 +15,8 @@ set hlsearch
 set confirm
 "swp file is annoying to me
 set noswapfile
-"set interactive shell
-"this option is causing
-"some problem with vim dispatch
-"disable it for now
-"set shellcmdflag=-ic
+
+let $BASH_ENV="~/.bashrc"
 
 colo solarized
 
