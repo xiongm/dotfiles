@@ -110,7 +110,10 @@ nmap  <leader>g :%s/<C-R><C-W>/
 nnoremap <leader>cq :ccl<CR>
 
 "shortcut to edit this file
-:command EditMyMapping :e ~/.vim/modules/mappings.vim
+:command! EditMyMapping :e ~/.vim/modules/mappings.vim
+
+"open definition in new tab
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " DISABLED 
 

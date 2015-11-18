@@ -13,6 +13,8 @@ set hlsearch
 "confirm file save instead of unsuccesful
 "quit
 set confirm
+"swp file is annoying to me
+set noswapfile
 
 
 colo solarized
