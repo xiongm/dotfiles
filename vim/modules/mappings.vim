@@ -111,7 +111,7 @@ nnoremap <leader>co :Copen<CR>
 "close quicklist window
 nnoremap <leader>cq :ccl<CR>
 
-"shortcut to edit this file
+"commands to edit vim config
 :command! EditMyMapping :e ~/.vim/modules/mappings.vim
 :command! EditMyPlugin :e ~/.vim/plugins.vim
 :command! EditMyLocalVim :e ~/.vimrc_local
