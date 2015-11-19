@@ -114,6 +114,7 @@ nnoremap <leader>cq :ccl<CR>
 "shortcut to edit this file
 :command! EditMyMapping :e ~/.vim/modules/mappings.vim
 :command! EditMyPlugin :e ~/.vim/plugins.vim
+:command! EditMyLocalVim :e ~/.vimrc_local
 
 "open definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
