@@ -30,6 +30,7 @@ Return a list of installed packages or nil for every skipped package."
 (ensure-package-installed 'elscreen 
                           'evil
 			  'smart-mode-line
+			  'auto-complete
                           'helm)
 
 (package-initialize)
@@ -42,8 +43,8 @@ Return a list of installed packages or nil for every skipped package."
 
 ;yes/no to y/n 
 (fset 'yes-or-no-p 'y-or-n-p)
-;treat the symlink as the file it links to
-(setq vc-follow-symlinks t)
+;treat the file as symlinks
+(setq vc-follow-symlinks nil)
 ;ctrl-hjkl to move between windowsx
 (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
 (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
@@ -73,3 +74,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq sml/no-confirm-load-theme t)
 (setq sml/theme 'light)
 (sml/setup)
+
+
+;auto complete
+(ac-config-default)
