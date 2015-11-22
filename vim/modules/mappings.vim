@@ -1,6 +1,8 @@
 "change default <leader> key to ',' 
 let mapleader=","
 
+nnoremap n nzz
+
 "unmap Q currently mapped to ex mode
 "its very annoying
 map Q <Nop>
