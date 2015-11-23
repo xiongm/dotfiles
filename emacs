@@ -29,6 +29,7 @@ Return a list of installed packages or nil for every skipped package."
 
 (ensure-package-installed 'elscreen 
                           'evil
+                          'evil-leader
 			  'smart-mode-line
 			  'auto-complete
                           'helm)
