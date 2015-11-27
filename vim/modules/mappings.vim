@@ -64,6 +64,10 @@ inoremap <C-x><C-w> <ESC>:w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
 
+" remap gp to visually select last past/yanked text
+" `[ goes to start of last changed text
+" `] goes to end of last changed text
+nnoremap gp `[v`]
 
 "select all
 nnoremap <leader>a ggVG
