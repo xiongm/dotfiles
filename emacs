@@ -74,6 +74,11 @@ Return a list of installed packages or nil for every skipped package."
 
 ;no tool bar
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq linum-format "%d ")
+(global-linum-mode t)
+(global-hl-line-mode t)
+(set-face-background 'hl-line "#313537")
 
 ;simulate vim's tabs
 (load "elscreen" "ElScreen" t)
