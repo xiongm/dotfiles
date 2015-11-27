@@ -60,10 +60,13 @@ Return a list of installed packages or nil for every skipped package."
 (define-key evil-insert-state-map (kbd "C-a") 'evil-beginning-of-line)
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
+;don't move cursor back one position when exiting insert mode
+(setq evil-move-cursor-back nil)
 
 (evil-leader/set-leader ",")
 ;(evil-leader/set-key "q" 'kill-buffer-and-window
 (evil-leader/set-key "v" 'split-window-right)
+(evil-leader/set-key "s" 'split-window-below)
 (evil-leader/set-key "," 'other-window)
 (evil-leader/set-key "x" 'helm-M-x)
 (evil-leader/set-key "r" 'dired-jump)

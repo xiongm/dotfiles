@@ -64,8 +64,6 @@ inoremap <C-x><C-w> <ESC>:w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
 
-" source vimrc file
-nnoremap <leader>v :so $MYVIMRC<CR>
 
 "select all
 nnoremap <leader>a ggVG
@@ -95,11 +93,12 @@ nmap <F5> :Ack<Space><C-R><C-W>
 nmap <F8> :TagbarToggle<CR>
 "an alternative way to toggle tagbar
 nmap <leader>ot :TagbarToggle<CR>
-
-
-
 "map ,r to find current file in NERDTree
-map <leader>r :NERDTreeFind<cr>
+nmap <leader>r :NERDTreeFind<cr>
+",v to vertical split window
+nmap <leader>v :vsplit<cr>
+",s to split window
+nmap <leader>s :split<cr>
 
 "place cusor on any word, and press
 "<leader>g will put that word to 
@@ -117,6 +116,9 @@ nnoremap <leader>cq :ccl<CR>
 :command! EditMyMapping :e ~/.vim/modules/mappings.vim
 :command! EditMyPlugin :e ~/.vim/plugins.vim
 :command! EditMyLocalVim :e ~/.vimrc_local
+
+" source vimrc file
+:command! ReloadMyVim :so $MYVIMRC
 
 "open definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>

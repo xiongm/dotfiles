@@ -4,7 +4,7 @@
 "change vim airline theme
 "let g:airline_theme='solarized'
 
-"let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 "map single <Leader> to easymotion prefix
 "default map is double <Leader>
