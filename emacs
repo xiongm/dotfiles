@@ -30,11 +30,15 @@ Return a list of installed packages or nil for every skipped package."
 (ensure-package-installed 'elscreen 
                           'evil
                           'evil-leader
+			  'key-chord
 			  'smart-mode-line
+			  'smart-mode-line-powerline-theme
+			  'monokai-theme
 			  'auto-complete
                           'helm)
 
 (package-initialize)
+
 
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -51,9 +55,14 @@ Return a list of installed packages or nil for every skipped package."
 (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+(define-key evil-normal-state-map (kbd "C-e") 'evil-end-of-line)
+(define-key evil-insert-state-map (kbd "C-e") 'evil-end-of-line)
+(define-key evil-insert-state-map (kbd "C-a") 'evil-beginning-of-line)
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
 
 (evil-leader/set-leader ",")
-;(evil-leader/set-key "q" 'kill-buffer-and-window)
+;(evil-leader/set-key "q" 'kill-buffer-and-window
 (evil-leader/set-key "v" 'split-window-right)
 (evil-leader/set-key "," 'other-window)
 (evil-leader/set-key "x" 'helm-M-x)
@@ -65,6 +74,8 @@ Return a list of installed packages or nil for every skipped package."
 
 ;simulate vim's tabs
 (load "elscreen" "ElScreen" t)
+(setq elscreen-tab-display-control nil)
+(setq elscreen-tab-display-kill-screen nil)
 (elscreen-start)
 (evil-leader/set-key "tn" 'elscreen-create)
 (evil-leader/set-key "td" 'elscreen-kill)
@@ -79,3 +90,40 @@ Return a list of installed packages or nil for every skipped package."
 
 ;auto complete
 (ac-config-default)
+
+;press jj quickly to exit insert mode
+;requires key-chord
+(key-chord-mode 1)
+(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+
+;bind ENTER w/ autoindent
+;same as C-j
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
+;set indentwidth for c/cpp/java
+;also set indent style to linux
+;emacs defaults to gnu, which indents
+;braces. we don't want to indent braces
+(setq c-default-style "linux"
+      c-basic-offset 2)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("196cc00960232cfc7e74f4e95a94a5977cb16fd28ba7282195338f68c84058ec" default)))
+ '(inhibit-startup-screen t)
+ '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Monospace" :foundry "unknown" :slant normal :weight normal :height 145 :width normal)))))
+
+
+
+(load-theme 'monokai)
+

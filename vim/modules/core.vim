@@ -18,7 +18,7 @@ set noswapfile
 
 let $BASH_ENV="~/.bashrc"
 
-colo solarized
+colo molokai
 
 if has('gui_running')
   set guioptions+=c

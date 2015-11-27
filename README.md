@@ -21,11 +21,7 @@ Bash
 -----------
 ```console
 $ln -sf $HOME/dotfiles/bash/ $HOME/.bash
-```
-Add following line to $HOME/.bashrc
-
-```
-source ~/dotfiles/bashrc
+echo "source ~/dotfiles/bashrc" >> $HOME/.bashrc
 ```
 
 Emacs
