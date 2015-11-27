@@ -70,7 +70,7 @@ nnoremap <leader>qa :qa<CR>
 nnoremap gp `[v`]
 
 "select all
-nnoremap <leader>a ggVG
+nnoremap <leader>a ggvG
 
 "ctrl+kjhl navigation between windows
 nmap <silent> <C-h> :wincmd h<CR>
