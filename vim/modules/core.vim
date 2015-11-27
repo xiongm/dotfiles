@@ -19,6 +19,7 @@ set noswapfile
 let $BASH_ENV="~/.bashrc"
 
 colo molokai
+let g:rehash256 = 1
 
 if has('gui_running')
   set guioptions+=c
