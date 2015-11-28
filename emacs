@@ -41,6 +41,7 @@ Return a list of installed packages or nil for every skipped package."
 
 
 (require 'evil-leader)
+(setq evil-leader/in-all-states 1)
 (global-evil-leader-mode)
 (require 'evil)
 (evil-mode t)
@@ -62,6 +63,13 @@ Return a list of installed packages or nil for every skipped package."
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
 ;don't move cursor back one position when exiting insert mode
 (setq evil-move-cursor-back nil)
+;change cursor color depending on mode
+(setq evil-emacs-state-cursor '("red" box))
+(setq evil-normal-state-cursor '("green" box))
+(setq evil-visual-state-cursor '("orange" box))
+(setq evil-insert-state-cursor '("red" bar))
+(setq evil-replace-state-cursor '("red" bar))
+(setq evil-operator-state-cursor '("red" hollow))
 
 (evil-leader/set-leader ",")
 ;(evil-leader/set-key "q" 'kill-buffer-and-window
@@ -79,6 +87,7 @@ Return a list of installed packages or nil for every skipped package."
 (global-linum-mode t)
 (global-hl-line-mode t)
 (set-face-background 'hl-line "#313537")
+(setq make-backup-files nil)
 
 ;simulate vim's tabs
 (load "elscreen" "ElScreen" t)
