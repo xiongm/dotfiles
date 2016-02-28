@@ -13,10 +13,12 @@ let g:loaded_youcompleteme = 0
 let g:NERDTreeDirArrows=0
 let g:ack_default_options = " -H --nocolor --nogroup -G '^(?!.*(tests|UnitTest)/.*).*$' "
 
-
+"add your syntastic cpp includ dirs here
+"let g:syntastic_cpp_include_dirs = []
 
 let g:ack_default_options = " -H --nocolor --nogroup "
 "when popup menu is visible, the white space will
 "simply select the highlighted menu
 "inoremap <expr> <Space> pumvisible() ? "\<C-y>" : " "
+
 

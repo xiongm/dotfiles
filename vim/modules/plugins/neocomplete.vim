@@ -13,6 +13,8 @@ endif
 " for c and c++
 let g:neocomplete#force_omni_input_patterns.c =  '[^.[:digit:] *\t]\%(\.\|->\)\w*'
 let g:neocomplete#force_omni_input_patterns.cpp =  '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+" remove autocomplete for :: as it sometimes cause problems
+let g:neocomplete#force_omni_input_patterns.cpp =  '[^.[:digit:] *\t]\%(\.\|->\)\w*'
 
 
 " Plugin key-mappings.
