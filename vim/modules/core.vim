@@ -19,7 +19,7 @@ set noswapfile
 let $BASH_ENV="~/.bashrc"
 
 colo molokai
-let g:rehash256 = 1
+"let g:rehash256 = 1
 
 if has('gui_running')
   set guioptions+=c
@@ -29,6 +29,10 @@ else
 endif
 
 set background=dark
+
+"molokai's matchparen scheme drives me crazy programming c++
+"so im changing it to just use underscore
+:hi MatchParen cterm=underline ctermbg=none ctermfg=none
 
 
 "let explorer to always browse
