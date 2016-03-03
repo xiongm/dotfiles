@@ -10,10 +10,16 @@ let g:loaded_youcompleteme = 0
 "set background=dark
 "colo mango
 
-let g:NERDTreeDirArrows=0
+"deprecated
+"let g:NERDTreeDirArrows=0
+
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
+
 let g:ack_default_options = " -H --nocolor --nogroup -G '^(?!.*(tests|UnitTest)/.*).*$' "
 
 "add your syntastic cpp includ dirs here
+"seperated by ','
 "let g:syntastic_cpp_include_dirs = []
 
 let g:ack_default_options = " -H --nocolor --nogroup "
