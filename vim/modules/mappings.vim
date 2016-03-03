@@ -124,6 +124,7 @@ nnoremap <leader>cq :ccl<CR>
 :command! EditMyPlugin :e ~/.vim/plugins.vim
 :command! EditMyHelp :e ~/.vim/README
 :command! EditMyLocalVim :e ~/.vimrc_local
+:command! FullFileName :echo expand('%:p')
 
 " source vimrc file
 :command! ReloadMyVim :so $MYVIMRC
