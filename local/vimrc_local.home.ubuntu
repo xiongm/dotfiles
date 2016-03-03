@@ -1,3 +1,5 @@
+set path +=~/projects/quickfix/src/C++/
+
 if has('gui_running')
   set guifont=Courier\ 13
   set guioptions-=T
@@ -20,7 +22,7 @@ let g:ack_default_options = " -H --nocolor --nogroup -G '^(?!.*(tests|UnitTest)/
 
 "add your syntastic cpp includ dirs here
 "seperated by ','
-"let g:syntastic_cpp_include_dirs = []
+let g:syntastic_cpp_include_dirs = ["/home/ming/projects/quickfix/src/C++"]
 
 let g:ack_default_options = " -H --nocolor --nogroup "
 "when popup menu is visible, the white space will
