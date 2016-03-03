@@ -11,9 +11,28 @@ cpp include guard => i"once" + tab
 jump to indention from start of line => cc
 change entire line => cc
 local search and replace under cursor => gr
-global search and replace under cursor => gr
+global search and replace under cursor => gR
 highlight all local ocurrences => gd
 highlight all global ocurrences => gD
+
+
+-----------------------------------------------------------------------
+-                  MULTIPLE FILE SEARCH AND REPLACE                   -
+-----------------------------------------------------------------------
+1. using args directly
+1.1 select multiple files,e.g
+:args Acceptor.*pp
+1.2 show currently selected files
+:args
+1.3 perform update just like you would do for a single files
+:argdo %s/a/b/ge | update
+(do help argdo for more info)
+
+2. using Qargs (customized function, see my mappings)
+2.1 using ack or other search tools to get a reference files list
+2.2 using Qargs to populate file lists to args
+2.3 use args to confirm selection
+2.4 perform desired update, e.g. search and replace
 
 
 

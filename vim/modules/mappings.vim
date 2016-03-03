@@ -138,6 +138,26 @@ nnoremap <leader>cq :ccl<CR>
 "open definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
+
+"help Qargs command to set the arglist to contain each of the files
+"referenced by quicklist
+"this is especially helpful after using ack to find references
+"and you want to do a search and replace across files
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+function! QuickfixFilenames()
+  " Building a hash ensures we get each buffer only once
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let bufnr = quickfix_item['bufnr']
+    " Lines without files will appear as bufnr=0
+    if bufnr > 0
+      let buffer_numbers[bufnr] = bufname(bufnr)
+    endif
+  endfor
+  return join(map(values(buffer_numbers),'fnameescape(v:val)'))
+endfunction
+
+
 " DISABLED 
 
 "when popup menu is visible, the white space will
