@@ -10,7 +10,11 @@ select content inside () including () => vab
 cpp include guard => i"once" + tab
 jump to indention from start of line => cc
 change entire line => cc
-global replace word under cursor => ,r
+local search and replace under cursor => gr
+global search and replace under cursor => gr
+highlight all local ocurrences => gd
+highlight all global ocurrences => gD
+
 
 
 
