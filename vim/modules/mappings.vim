@@ -111,8 +111,14 @@ nmap <leader>s :split<cr>
 "<leader>g will put that word to 
 "command line with global replace
 "syntax 
-vmap <leader>r :s/<C-R><C-W>/
-nmap  <leader>r :%s/<C-R><C-W>/
+vmap <leader>r :s/<C-R><C-W>//gc<left><left><left>
+nmap  <leader>r :%s/<C-R><C-W>//gc<left><left><left>
+
+" For local replace
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+
+" For global replace
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 "open quicklist window
 nnoremap <leader>co :Copen<CR>
