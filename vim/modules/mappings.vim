@@ -57,6 +57,9 @@ nnoremap <C-e> $
 " non blank text of line in normal mode
 nnoremap <C-a> ^
 
+" in insert mode, press ctrl-o to insert new line
+imap <C-o> <esc>o
+
 " exit vim emacs way
 nnoremap <C-x><C-c> :qa<CR>
 inoremap <C-x><C-c> <ESC>:qa<CR>
