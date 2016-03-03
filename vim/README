@@ -25,7 +25,7 @@ highlight all global ocurrences => gD
 1.2 show currently selected files
 :args
 1.3 perform update just like you would do for a single files
-:argdo %s/a/b/ge | update
+:argdo %s/a/b/ge | update  (or use '<leader>ad', a short cut of argdo )
 (do help argdo for more info)
 
 2. using Qargs (customized function, see my mappings)

@@ -125,6 +125,9 @@ nnoremap <leader>co :Copen<CR>
 "close quicklist window
 nnoremap <leader>cq :ccl<CR>
 
+" just a short cut to do argdo
+nnoremap <leader>ad :argdo %s/<C-R><C-W>//ge \| update<left><left><left><left><left><left><left><left><left><left><left><left>
+
 "commands to edit vim config
 :command! EditMyMapping :e ~/.vim/modules/mappings.vim
 :command! EditMyPlugin :e ~/.vim/plugins.vim
@@ -134,6 +137,7 @@ nnoremap <leader>cq :ccl<CR>
 
 " source vimrc file
 :command! ReloadMyVim :so $MYVIMRC
+
 
 "open definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
