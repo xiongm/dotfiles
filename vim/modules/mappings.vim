@@ -34,6 +34,9 @@ map <S-CR> O<ESC>
 nmap <Ctrl-s> :w<CR>
 imap <Ctrl-s> <Esc>:w<CR>a
 
+" open last file
+nnoremap <leader>b :e#<CR>
+
 " in insert mode, insert a semi colon at
 " the end of line. <C-o> here is used
 " to input a single normal mode command
