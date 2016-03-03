@@ -130,6 +130,7 @@ nnoremap <leader>ad :argdo %s/<C-R><C-W>//ge \| update<left><left><left><left><l
 
 "commands to edit vim config
 :command! EditMyMapping :e ~/.vim/modules/mappings.vim
+:command! EditMyCore :e ~/.vim/modules/core.vim
 :command! EditMyPlugin :e ~/.vim/plugins.vim
 :command! EditMyHelp :e ~/.vim/README
 :command! EditMyLocalVim :e ~/.vimrc_local
