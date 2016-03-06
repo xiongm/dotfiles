@@ -46,6 +46,7 @@ let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
 "o - in NORMAL mode, go to the next line
 "G - end of file
 "gg - beginning of file
+":Errors - show syntastic errors window
 
 
 "Useful vim commands for my reference
