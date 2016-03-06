@@ -15,7 +15,7 @@ let g:neocomplete#force_omni_input_patterns.c =  '[^.[:digit:] *\t]\%(\.\|->\)\w
 let g:neocomplete#force_omni_input_patterns.cpp =  '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 " remove autocomplete for :: as it sometimes cause problems
 " comment out this line if you think :: works just fine
-let g:neocomplete#force_omni_input_patterns.cpp =  '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+"let g:neocomplete#force_omni_input_patterns.cpp =  '[^.[:digit:] *\t]\%(\.\|->\)\w*'
 
 
 " Plugin key-mappings.
