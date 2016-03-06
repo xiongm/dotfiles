@@ -34,6 +34,9 @@ map <S-CR> O<ESC>
 nmap <Ctrl-s> :w<CR>
 imap <Ctrl-s> <Esc>:w<CR>a
 
+" open last file
+nnoremap <leader>b :e#<CR>
+
 " in insert mode, insert a semi colon at
 " the end of line. <C-o> here is used
 " to input a single normal mode command
@@ -97,8 +100,8 @@ nmap <F5> :Ack<Space><C-R><C-W>
 nmap <F8> :TagbarToggle<CR>
 "an alternative way to toggle tagbar
 nmap <leader>ot :TagbarToggle<CR>
-"map ,r to find current file in NERDTree
-nmap <leader>r :NERDTreeFind<cr>
+"map ,d to find current file in NERDTree
+nmap <leader>d :NERDTreeFind<cr>
 ",v to vertical split window
 nmap <leader>v :vsplit<cr>
 ",s to split window
@@ -108,8 +111,8 @@ nmap <leader>s :split<cr>
 "<leader>g will put that word to 
 "command line with global replace
 "syntax 
-vmap <leader>g :s/<C-R><C-W>/
-nmap  <leader>g :%s/<C-R><C-W>/
+vmap <leader>r :s/<C-R><C-W>/
+nmap  <leader>r :%s/<C-R><C-W>/
 
 "open quicklist window
 nnoremap <leader>co :Copen<CR>
@@ -119,7 +122,9 @@ nnoremap <leader>cq :ccl<CR>
 "commands to edit vim config
 :command! EditMyMapping :e ~/.vim/modules/mappings.vim
 :command! EditMyPlugin :e ~/.vim/plugins.vim
+:command! EditMyHelp :e ~/.vim/README
 :command! EditMyLocalVim :e ~/.vimrc_local
+:command! FullFileName :echo expand('%:p')
 
 " source vimrc file
 :command! ReloadMyVim :so $MYVIMRC

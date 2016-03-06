@@ -19,7 +19,7 @@ set noswapfile
 let $BASH_ENV="~/.bashrc"
 
 colo molokai
-let g:rehash256 = 1
+"let g:rehash256 = 1
 
 if has('gui_running')
   set guioptions+=c
@@ -30,6 +30,12 @@ endif
 
 set background=dark
 
+"molokai's matchparen scheme drives me crazy programming c++
+"so im changing it to just use underscore
+:hi MatchParen cterm=underline ctermbg=none ctermfg=none
+"molokai's visual selection color scheme is not good
+"override to just use white
+hi Visual   ctermfg=0    ctermbg=222
 
 "let explorer to always browse
 "directory of current file
@@ -38,6 +44,7 @@ autocmd BufEnter * lcd %:p:h
 "we need vim-snippets but we don't want to use
 "the snippets that come with it
 let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
+
 
 "Quick vim cheat sheat
 "a - append after cursor

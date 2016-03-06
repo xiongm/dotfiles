@@ -9,5 +9,5 @@ let g:clang_c_completeopt = 'menuone,preview'
 let g:clang_cpp_completeopt = 'menuone,preview'
 
 " disable diagnostic window by default
-let g:clang_diagsopt = ''
+"let g:clang_diagsopt = ''
 
