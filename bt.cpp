@@ -38,18 +38,12 @@ public:
 private:
   void erase_i(Node * parent)
   {
-    if (!parent) return;
-    if (parent->left)
+    if (parent)
     {
       erase_i(parent->left);
-      parent->left = nullptr;
-    }
-    if (parent->right)
-    {
       erase_i(parent->right);
-      parent->right = nullptr;
+      delete parent;
     }
-    delete parent;
   }
 
   void inorder(Node * root)
