@@ -17,7 +17,9 @@ class bt
 {
 public:
   bt () :root_(nullptr) {};
-  ~bt () {};
+  ~bt () {
+    erase();
+  };
   void insert(int val)
   {
     root_ = insert_i(val, root_);
@@ -28,7 +30,28 @@ public:
     inorder(root_);
   }
 
+  void erase()
+  {
+    erase_i(root_);
+    root_ = nullptr;
+  }
 private:
+  void erase_i(Node * parent)
+  {
+    if (!parent) return;
+    if (parent->left)
+    {
+      erase_i(parent->left);
+      parent->left = nullptr;
+    }
+    if (parent->right)
+    {
+      erase_i(parent->right);
+      parent->right = nullptr;
+    }
+    delete parent;
+  }
+
   void inorder(Node * root)
   {
     if (!root) return;
@@ -70,6 +93,11 @@ int main(int argc, char *argv[])
   {
     btree.insert(i);
   }
+
+  btree.inorder_traversal();
+
+  cout << "erasing tree" << endl;
+  btree.erase();
 
   btree.inorder_traversal();
   return 0;
