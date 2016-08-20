@@ -142,6 +142,7 @@ private:
   value_type * end_ = nullptr;
 };
 
+class Undo_Buffer;
 
 ostream & operator<<(ostream & os, const Buffer & rhs)
 {
@@ -152,22 +153,76 @@ ostream & operator<<(ostream & os, const Buffer & rhs)
   return os;
 }
 
+class Undo_Buffer : public Buffer
+{
+public:
+  Undo_Buffer(const char * buf)
+   :Buffer(buf)
+  {
+
+  }
+  
+  Undo_Buffer(size_type size = 0)
+    :Buffer(size)
+  {
+
+  }
+
+  Undo_Buffer(const Undo_Buffer & rhs)
+    :Buffer(rhs)
+  {
+
+  }
+
+  Undo_Buffer & operator=(Undo_Buffer rhs)
+  {
+    save();
+    Buffer::operator=(rhs);
+    return *this;
+  }
+
+  void resize(size_type new_size)
+  {
+    save();
+    Buffer::resize(new_size);
+  }
+
+  void undo()
+  {
+    restore();
+  }
+
+private:
+  // save current state
+  void save()
+  {
+    last_ = *this;
+  }
+
+  // restore last saved state
+  void restore()
+  {
+    Buffer::operator=(last_);
+  }
+
+  Buffer last_;
+};
+
 
 int main(int argc, char * argv[])
 {
-  Buffer bf1("hello world");
-  Buffer bf2 = bf1;
-  bf1.resize(5);
-  cout << bf1 << endl;
-  cout << bf2 << endl;
+  Undo_Buffer ubf1("ubf1");
+  Undo_Buffer ubf2("ubf2");
+  ubf2 = ubf1;
+  cout << ubf2 << endl;
+  ubf2.undo();
+  cout << ubf2 << endl;
 
-  list<Buffer> buf_list;
-  buf_list.push_back(Buffer("bf1"));
-  buf_list.push_back(Buffer("bf2"));
-  for (auto i : buf_list)
-  {
-    std::cout << i << std::endl;
-  }
-  Buffer bf3;
+
+  Undo_Buffer ubf3("hello world");
+  ubf3.resize(5);
+  cout << ubf3 << endl;
+  ubf3.undo();
+  cout << ubf3 << endl;
 
 }
