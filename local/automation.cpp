@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <memory>
 
 using namespace std;
 
@@ -171,13 +172,13 @@ int main()
   vector<unique_ptr<Device>> devices;
   vector<unique_ptr<Sensor>> sensors;
 
-  devices.push_back(unique_ptr<Device>(new Device("television")));
+  devices.emplace_back(unique_ptr<Device>(new Device("television")));
   devices.back()->turn_on();
-  devices.push_back(unique_ptr<Device>(new Device("refrigeratete")));
+  devices.emplace_back(unique_ptr<Device>(new Device("refrigeratete")));
   devices.back()->turn_on();
 
-  sensors.push_back(unique_ptr<Sensor> (new Sensor("s1", 3)));
-  sensors.push_back(unique_ptr<Sensor> (new Sensor("s2", 4)));
+  sensors.emplace_back(unique_ptr<Sensor> (new Sensor("s1", 3)));
+  sensors.emplace_back(unique_ptr<Sensor> (new Sensor("s2", 4)));
 
 
   Controller controller;

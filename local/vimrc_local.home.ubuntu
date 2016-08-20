@@ -23,7 +23,7 @@ let g:ack_default_options = " -H --nocolor --nogroup -G '^(?!.*(tests|UnitTest)/
 "add your syntastic cpp includ dirs here
 "seperated by ','
 let g:syntastic_cpp_include_dirs = ["/home/ming/projects/quickfix/src/C++"]
-let g:syntastic_cpp_compiler_options = ' -std=c++11 '
+let g:syntastic_cpp_compiler_options = ' -std=c++1y '
 
 let g:ack_default_options = " -H --nocolor --nogroup "
 "when popup menu is visible, the white space will
