@@ -16,8 +16,29 @@ snippet cl "class .. (class)"
 class ${1:`!p snip.rv = snip.basename or "name"`}
 {
 public:
-	${1/(\w+).*/$1/} (${2:arguments});
-	virtual ~${1/(\w+).*/$1/} ();
+	${1/(\w+).*/$1/} (${2:})
+	{
+	}
+
+	${1/(\w+).*/$1/} (const ${1/(\w+).*/$1/ & rhs} & rhs)
+	{
+	}
+
+	${1/(\w+).*/$1/} & operator=(const ${1/(\w+).*/$1/ & rhs} & rhs)
+	{
+	}
+
+	${1/(\w+).*/$1/} (const ${1/(\w+).*/$1/ & rhs} && rhs)
+	{
+	}
+
+	${1/(\w+).*/$1/} & operator=(const ${1/(\w+).*/$1/ && rhs} & rhs)
+	{
+	}
+
+	virtual ~${1/(\w+).*/$1/} ()
+	{
+	}
 
 private:
 	${0:/* data */}
