@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string> 
 #include <sstream>
+#include <tuple>
 
 using namespace std;
 
@@ -25,6 +26,15 @@ struct Data
   }
 };
 
+typedef tuple<string, double, bool> my_tuple;
+
+
+ostream & operator<<(ostream & os, const my_tuple & data)
+{
+  cout << "get:" << get<0>(data) << "," << get<1>(data) << "," << get<2>(data);
+}
+
+template<class T>
 class Solution
 {
 public:
@@ -59,8 +69,9 @@ public:
 
   }
 
-  vector<Data> data_;
+  vector<T> data_;
 };
+
 
 void usage()
 {
@@ -74,9 +85,9 @@ int main(int argc, char *argv[])
     usage();
     return -1;
   }
-  Solution solution(argv[1]);
+  Solution<my_tuple> solution(argv[1]);
   
-  for (auto i : solution.data_)
+  for (auto & i : solution.data_)
   {
     cout << i << endl;
   }
