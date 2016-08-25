@@ -21,6 +21,7 @@ struct Data
   friend ostream & operator<<(ostream & os, const Data & data)
   {
     os << data.symbol << "," << data.price << "," << data.is_open;
+    return os;
   }
 };
 
