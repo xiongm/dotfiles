@@ -89,6 +89,8 @@ private:
 class Controller
 {
 public:
+  // pass by value, if its a rvalue, then two moves
+  // if its a lvalue, then a copy constructor and a move
   void add_device(shared_ptr<Device>  device)
   {
     devices_[device->get_name()] = std::move(device);
