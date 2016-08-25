@@ -89,14 +89,14 @@ private:
 class Controller
 {
 public:
-  void add_device(Device * device)
+  void add_device(shared_ptr<Device>  device)
   {
-    devices_[device->get_name()] = device;
+    devices_[device->get_name()] = std::move(device);
   }
 
-  void add_sensor(Sensor * sensor)
+  void add_sensor(shared_ptr<Sensor> sensor) 
   {
-    sensors_[sensor->get_name()] = sensor;
+    sensors_[sensor->get_name()] = std::move(sensor);
 
   }
 
@@ -110,12 +110,31 @@ public:
     sensors_.erase(name);
   }
 
+
+  void turnon_device(const char *name)
+  {
+    if (devices_.count(name))
+    {
+      devices_[name]->turn_on();
+    }
+
+  }
+  
+  void turnoff_device(const char *name)
+  {
+    if (devices_.count(name))
+    {
+      devices_[name]->turn_off();
+    }
+
+  }
+
   void update_sensor(const char * name, int stats)
   {
     if (sensors_.count(name))
     {
       sensors_[name]->set(stats);
-      notify_all(sensors_[name]);
+      notify_all(sensors_[name].get());
     }
 
   }
@@ -129,10 +148,22 @@ private:
     }
   }
 
-  unordered_map<string, Device *> devices_;
-  unordered_map<string, Sensor *> sensors_;
+  unordered_map<string, shared_ptr<Device> > devices_;
+  unordered_map<string, shared_ptr<Sensor> > sensors_;
 };
 
+struct SimpleFactory
+{
+  static shared_ptr<Sensor> create_sensor(const char * name)
+  {
+    return make_shared<Sensor>(name);
+  }
+
+  static shared_ptr<Device> create_device(const char *name)
+  {
+    return make_shared<Device>(name);
+  }
+};
 int main()
 {
   vector<unique_ptr<Device>> devices;
@@ -149,18 +180,15 @@ int main()
 
   Controller controller;
 
-  for (auto & i : devices)
-  {
-    controller.add_device(i.get());
-  }
+  controller.add_device(SimpleFactory::create_device("television"));
+  controller.add_device(SimpleFactory::create_device("refrigerator"));
 
-  for (auto & i : sensors)
-  {
-    controller.add_sensor(i.get());
-  }
+  controller.turnon_device("television");
+  controller.turnon_device("refrigerator");
 
-  controller.update_sensor("s1", 5); 
-  devices.back()->turn_off();
-  controller.update_sensor("s2", 3);
+
+  controller.add_sensor(SimpleFactory::create_sensor("sensor01"));
+  controller.add_sensor(SimpleFactory::create_sensor("sensor02"));
+  controller.update_sensor("sensor01", 5); 
 
 }
