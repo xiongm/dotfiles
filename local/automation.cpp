@@ -6,9 +6,10 @@
 
 using namespace std;
 
-struct Named_Object
+
+struct ISubject
 {
-  Named_Object(const char * name)
+  ISubject(const char * name)
     :name_(name)
   {
 
@@ -19,16 +20,38 @@ struct Named_Object
     return name_;
   }
 
-  virtual ~Named_Object() = default;
+  virtual void set(int val) = 0;
+  virtual int get() const = 0;
+private:
+  const char * name_;
+};
+
+struct IObserver
+{
+  IObserver(const char * name)
+    :name_(name)
+  {
+
+  }
+
+  const char * get_name() const
+  {
+    return name_;
+  }
+
+
+  virtual void update(ISubject *) = 0;
+
+  virtual ~IObserver() = default;
 private:
   const char *name_;
 };
 
-class Sensor : public Named_Object
+class Sensor : public ISubject
 {
 public:
   explicit Sensor(const char * name, int stats = 0)
-    :Named_Object(name)
+    :ISubject(name)
     ,stats_(stats)
   {
 
@@ -48,11 +71,11 @@ private:
   int stats_;
 };
 
-class Device : public Named_Object
+class Device : public IObserver
 {
 public:
   explicit Device(const char * name)
-    :Named_Object(name)
+    :IObserver(name)
      ,power_(0)
   {
 
@@ -73,11 +96,11 @@ public:
     return power_;
   }
 
-  void update(Sensor * sensor)
+  void update(ISubject * subject)
   {
     if (on())
     {
-      cout << "Device " << get_name() << " : Update sensor " << sensor->get_name() << " with stats " << sensor->get() << endl;
+      cout << "Device " << get_name() << " : Update sensor " << subject->get_name() << " with stats " << subject->get() << endl;
     }
 
   }

@@ -4,14 +4,28 @@
 
 using namespace std;
 
-int64_t sum(int n, int64_t result = 0)
+
+// tail recursion optimization
+int64_t sum_helper(unsigned int n, int64_t result = 0)
 {
   if (n == 0)
   {
     return result;
   }
-  return sum(n - 1, result + n);
+  return sum_helper(n - 1, result + n);
 }
+
+int64_t sum(int n)
+{
+  int sign = n > 0 ? 1 : -1;
+
+  // sum_helper will only calculate the positive number
+  // so res = sign * sum_helper(n)
+  // if n > 0 then convert it to unsigned int
+  // if n < 0 then convert it to unsigned int as well
+  return sign * sum_helper(n > 0 ? (unsigned int) n : -((unsigned int)n)); 
+}
+
 
 int64_t no_tail_sum(int n)
 {
@@ -51,7 +65,7 @@ int main(int argc, char *argv[])
     if (valid(argv[i]))
     {
       int n = atoi(argv[i]);
-      cout << "The sum of all integers between 0 and " << n << " is " << no_tail_sum(n) << endl;
+      cout << "The sum of all integers between 0 and " << n << " is " << sum(n) << endl;
     } else
     {
       cout << argv[i] << " is not a number" << endl; 
