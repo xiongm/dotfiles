@@ -1,6 +1,10 @@
 cheapt sheats
 
+new session:
+tmux new -s work
+
 create window  --> C-a c
 close window   --> C-d
 list windows   --> C-a w
 rename current window --> C-a ,
+close session --> C-a :kill-session
