@@ -38,8 +38,6 @@ Plug 'marijnh/tern_for_vim'
 Plug 'Raimondi/delimitMate'
 "use <Leader>y, to trigger
 Plug 'mattn/emmet-vim'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
 Plug 'kana/vim-altr'
 Plug 'ervandew/supertab'
 Plug 'mileszs/ack.vim'
