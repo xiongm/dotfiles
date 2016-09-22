@@ -7,7 +7,7 @@ Checkout
 -----------
 ```console
 $cd ~/
-$git clone git@github.com:xiongm/dotfiles.git
+$git clone https://github.com/xiongm/dotfiles.git
 ```
 
 Vim
