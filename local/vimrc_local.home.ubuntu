@@ -1,4 +1,6 @@
 set path +=~/projects/quickfix/src/C++/
+set path +=~/projects/theme/src
+set path +=~/projects/theme/src/theme/test
 
 if has('gui_running')
   set guifont=Courier\ 13
@@ -14,15 +16,19 @@ let g:loaded_youcompleteme = 0
 
 "deprecated
 "let g:NERDTreeDirArrows=0
-
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
+"let g:NERDTreeDirArrowExpandable = '+'
+"let g:NERDTreeDirArrowCollapsible = '-'
 
 let g:ack_default_options = " -H --nocolor --nogroup -G '^(?!.*(tests|UnitTest)/.*).*$' "
 
 "add your syntastic cpp includ dirs here
 "seperated by ','
-let g:syntastic_cpp_include_dirs = ["/home/ming/projects/quickfix/src/C++"]
+let g:syntastic_cpp_include_dirs = [
+      \"/home/mxiong/projects/theme/src/",
+      \"/usr/local/gtest/gtest/include/",
+      \"/home/mxiong/projects/theme/src/theme/test",
+      \"/usr/local/boost/boost_1_57_0/include",
+      \]
 let g:syntastic_cpp_compiler_options = ' -std=c++1y '
 
 let g:ack_default_options = " -H --nocolor --nogroup "
