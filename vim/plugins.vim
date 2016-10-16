@@ -54,4 +54,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-dispatch'
 Plug 'octol/vim-cpp-enhanced-highlight'
+<<<<<<< HEAD
 Plug 'airblade/vim-gitgutter'
+=======
+Plug 'christoomey/vim-tmux-navigator'
+>>>>>>> a084fbef13e7e45db4650e6cf35f75cd14005bf1
