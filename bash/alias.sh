@@ -14,6 +14,6 @@ alias mkdir='mkdir -pv'
 
 alias ports='netstat -tulanp'
 
-alias df='df -Tha --total'
-alias du='du -ach | sort -h'
+alias diskfile='df -Tha --total'
+alias diskusage ='du -ach | sort -h'
 alias ps='ps auxf'
