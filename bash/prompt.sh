@@ -96,7 +96,7 @@ fi
 if [ "$color_prompt" = yes ]; then
   #\[and\] are important around color codes, without which bash will think
   #colorcodes will take up space, so won't know exactly where cursor is
-  PS1="\[$Green\]\u@\h\[$NO_COLOR\]:\[$Cyan\]\w\[$Red\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
+  PS1="\[$Green\]\u@\h\[$NO_COLOR\]:\[$Cyan\]\W\[$Red\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
 else
   PS1='\u@\h:\w$(parse_git_branch)\$ '
 fi

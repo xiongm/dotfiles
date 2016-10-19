@@ -142,6 +142,7 @@ nnoremap <leader>ad :argdo %s/<C-R><C-W>//ge \| update<left><left><left><left><l
 " source vimrc file
 :command! ReloadMyVim :so $MYVIMRC
 
+:command! Errors :YcmDiags
 
 "open definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>

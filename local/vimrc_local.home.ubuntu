@@ -9,7 +9,12 @@ endif
 "let g:SuperTabCrMapping=0
 "let g:seoul256_background=235
 "colo seoul256
-let g:loaded_youcompleteme = 0
+" turn on and off ycm syntastic checker and ycm itself
+"let g:loaded_youcompleteme = 0
+"let g:ycm_register_as_syntastic_checker = 0
+nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "set background=dark
 "colo mango
@@ -37,3 +42,4 @@ let g:ack_default_options = " -H --nocolor --nogroup "
 "inoremap <expr> <Space> pumvisible() ? "\<C-y>" : " "
 
 
+"let g:gutentags_project_root = ["~/projects/theme/"]
