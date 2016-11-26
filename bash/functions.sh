@@ -31,3 +31,12 @@ function extract {
     fi
 fi
 }
+
+
+function add_pub_key {
+  if [ -z "$1" ]; then
+    echo "Usage: add_pub_key <remote_host>"
+  else
+   cat ~/.ssh/*.pub | ssh $1 sh -c 'cat - >> .ssh/authorized_keys'
+  fi
+}
