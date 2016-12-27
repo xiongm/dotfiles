@@ -12,7 +12,6 @@ local.properties
 
 # Generic Android ignores #
 ###########################
-bin/
 target
 gen/
 
