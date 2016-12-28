@@ -45,6 +45,8 @@ autocmd BufEnter * lcd %:p:h
 "the snippets that come with it
 let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
 
+"indent=2 for python
+"autocmd FileType python setlocal sw=2 sts=2 expandtab
 
 "Quick vim cheat sheat
 "a - append after cursor
