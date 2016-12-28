@@ -49,24 +49,5 @@ let g:UltiSnipsSnippetDirectories=["MyUltiSnips"]
 "autocmd FileType python setlocal sw=2 sts=2 expandtab
 
 "Quick vim cheat sheat
-"a - append after cursor
-"J - join line below to the current line
-". - repeat last command
-"o - in NORMAL mode, go to the next line
-"G - end of file
-"gg - beginning of file
-":Errors - show syntastic errors window
-
-
-"Useful vim commands for my reference
-"1.copy from system clipboard
-"  1.1 Insert Mode,Ctrl+Shift+V 
-"2.comment multiple lines
-"  2.1 Ctrl+V to select
-"  2.2 Shift + I + <your comment character>
-"  2.3 exit insert mode, it will be there
-"3.comment multiple lines alternative
-"  3.1 Ctrl+V to select
-"  3.2 s/^/<your comment character>/g
-"
+" refer to README
 
