@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ -d ~/.bash ] || echo "Warning: no $HOME/.bash exists! Did you create symbolic link?" 
+[ -d ~/.bash ] || echo "Warning: no $HOME/.bash exists! Did you create symbolic link?"
 
 for script in ~/.bash/*.sh
 do
@@ -13,6 +13,7 @@ then
   source ~/.bashrc_local
 fi
 
+export PATH=$PATH:~/dotfiles/bin
 #--------------------------------------------------
 #WELCOME SCREEN
 #--------------------------------------------------
