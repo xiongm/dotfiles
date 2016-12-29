@@ -1,10 +1,28 @@
-cheapt sheats
+-----------------------------------------------------------------------
+-                          QUICK REFERENCES                           -
+-----------------------------------------------------------------------
 
-new session:
-tmux new -s work
+new session => tmux new -s work
+reattach session => tmux a -d
 
-create window  --> C-a c
-close window   --> C-d
-list windows   --> C-a w
-rename current window --> C-a ,
-close session --> C-a :kill-session
+create window  => C-a c
+close window   => C-d
+list windows   => C-a w
+rename current window => C-a ,
+close session => C-a & or C-a :kill-session
+
+-----------------------------------------------------------------------
+-                          OTHER OPERATIONS                           -
+-----------------------------------------------------------------------
+1. copy txt from a pane to vim in a different pane
+ * Ctrl + A [ to enter copy mode
+ * Move to start of txt
+ * Hit space
+ * select region, hit enter to end (and copy)
+ * go back to vim, enter insert mode
+ * Ctrl + A ] to paste
+2. common copy mode shortcuts
+ * Begin of line ^
+ * End of line   $
+ * Page down     Ctrl-d
+ * Page up       Ctrl-u

@@ -1,4 +1,4 @@
-"change default <leader> key to ',' 
+"change default <leader> key to ','
 let mapleader=","
 
 nnoremap n nzz
@@ -11,7 +11,7 @@ map Q <Nop>
 nmap <leader>tn :tabnew<cr>
 "map td to close tab
 nmap <leader>td :tabclose<cr>
-"H to move to previous tab 
+"H to move to previous tab
 nnoremap H gT
 "L to move to next tab
 nnoremap L gt
@@ -28,7 +28,7 @@ map <CR> o<ESC>
 " without entering insert mode
 map <S-CR> O<ESC>
 
-" map Ctrl-s to save file. this might not 
+" map Ctrl-s to save file. this might not
 " work due to c-s mapped to other system
 " functions
 nmap <Ctrl-s> :w<CR>
@@ -111,9 +111,9 @@ nmap <leader>v :vsplit<cr>
 nmap <leader>s :split<cr>
 
 "place cusor on any word, and press
-"<leader>g will put that word to 
+"<leader>g will put that word to
 "command line with global replace
-"syntax 
+"syntax
 vmap <leader>r :s/<C-R><C-W>//gc<left><left><left>
 nmap  <leader>r :%s/<C-R><C-W>//gc<left><left><left>
 
@@ -131,13 +131,17 @@ nnoremap <leader>cq :ccl<CR>
 " just a short cut to do argdo
 nnoremap <leader>ad :argdo %s/<C-R><C-W>//ge \| update<left><left><left><left><left><left><left><left><left><left><left><left>
 
-"commands to edit vim config
+"commands to edit vim config (and tmux's since tmux is so popular with vim)
 :command! EditMyMapping :e ~/.vim/modules/mappings.vim
 :command! EditMyCore :e ~/.vim/modules/core.vim
 :command! EditMyPlugin :e ~/.vim/plugins.vim
-:command! EditMyHelp :e ~/.vim/README
+:command! EditMyVimHelp :e ~/.vim/README
 :command! EditMyLocalVim :e ~/.vimrc_local
-:command! FullFileName :echo expand('%:p')
+
+
+
+:command! EditMyTmuxHelp :e ~/dotfiles/tmux/README
+:command! GetFullFileName :echo expand('%:p')
 
 " source vimrc file
 :command! ReloadMyVim :so $MYVIMRC
@@ -167,7 +171,7 @@ function! QuickfixFilenames()
 endfunction
 
 
-" DISABLED 
+" DISABLED
 
 "when popup menu is visible, the white space will
 "simply select the highlighted menu
