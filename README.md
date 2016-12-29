@@ -6,8 +6,8 @@ These are my personal dotfiles. feel free to use if you find them useful
 Checkout
 -----------
 ```console
-$cd ~/
-$git clone https://github.com/xiongm/dotfiles.git
+$ cd ~
+$ git clone https://github.com/xiongm/dotfiles.git
 ```
 
 Vim
@@ -27,13 +27,20 @@ $ ln -sf $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 Bash
 -----------
 ```console
-$ln -sf $HOME/dotfiles/bash/ $HOME/.bash
+$ ln -sf $HOME/dotfiles/bash/ $HOME/.bash
 echo "source ~/dotfiles/bashrc" >> $HOME/.bashrc
 ```
 
 Emacs
 -----------
 ```console
-$ln -sf $HOME/dotfiles/emacs $HOME/.emacs
+$ ln -sf $HOME/dotfiles/emacs $HOME/.emacs
+```
+
+Git
+-----------
+```console
+$ mv $HOME/.gitconfig $HOME/.gitconfig_local
+$ ln -sf $HOME/dotfiles/gitconfig $HOME/.gitconfig
 ```
 
