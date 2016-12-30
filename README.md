@@ -22,6 +22,7 @@ Tmux
 ----------
 ```console
 $ ln -sf $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+$ ln -s $HOME/dotfiles/tmux $HOME/.tmux
 ```
 
 Bash

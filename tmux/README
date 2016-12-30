@@ -17,12 +17,12 @@ last window (used to toggle between two sessions)=> C-a l
 -                          OTHER OPERATIONS                           -
 -----------------------------------------------------------------------
 1. copy txt from a pane to vim in a different pane
- * Ctrl + A [ to enter copy mode
+ * Ctrl + A Esc to enter copy mode
  * Move to start of txt
- * Hit space
- * select region, hit enter to end (and copy)
+ * Hit v
+ * select region, hit y to copy
  * go back to vim, enter insert mode
- * Ctrl + A ] to paste
+ * Ctrl + A p to paste
 2. common copy mode shortcuts
  * Begin of line ^
  * End of line   $
