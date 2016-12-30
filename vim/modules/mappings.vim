@@ -153,7 +153,7 @@ nnoremap <leader>ad :argdo %s/<C-R><C-W>//ge \| update<left><left><left><left><l
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-:command! Errors :YcmDiags
+:command! Compile :YcmDiags
 :command! FixIt :YcmCompleter FixIt
 
 "open definition in new tab
