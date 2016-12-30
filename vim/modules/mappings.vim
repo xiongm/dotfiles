@@ -99,8 +99,7 @@ nmap <F2> :w<CR>
 imap <F2> <Esc>:w<CR>
 "NERDTree
 nmap <silent> <F3> :NERDTreeToggle <cr>
-"vim-session 
-nmap <F4> :OpenSession<Space>
+
 "search word at current cursor
 nmap <F5> :Ack<Space><C-R><C-W>
 "tagbar
