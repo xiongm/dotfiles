@@ -20,6 +20,10 @@ nnoremap L gt
 "used in conjunction with set hlsearch
 nmap <silent> ,h :nohlsearch<cr>
 
+"map ,l to toggle line number
+"useful when needing to copy
+"something from vim window
+nmap <silent> ,l :set nu!<cr>
 
 " map Enter to break the line
 " without entering insert mode

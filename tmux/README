@@ -6,10 +6,12 @@ new session => tmux new -s work
 reattach session => tmux a -d
 
 create window  => C-a c
-close window   => C-d
+close window => C-a &
 list windows   => C-a w
 rename current window => C-a ,
-close session => C-a & or C-a :kill-session
+close current pane   => C-a x
+toggle current pane zoom (used for copying stuff to system clipboard)=> C-a z
+last window (used to toggle between two sessions)=> C-a l
 
 -----------------------------------------------------------------------
 -                          OTHER OPERATIONS                           -
