@@ -35,7 +35,11 @@ set background=dark
 :hi MatchParen cterm=underline ctermbg=none ctermfg=none
 "molokai's visual selection color scheme is not good
 "override to just use white
-hi Visual   ctermfg=0    ctermbg=222
+:hi Visual   ctermfg=0    ctermbg=222
+
+"had to add this line for some environment
+"otherwise the background color is not quite right
+hi Normal ctermbg=NONE
 
 "let explorer to always browse
 "directory of current file
