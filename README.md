@@ -10,6 +10,14 @@ $ cd ~
 $ git clone https://github.com/xiongm/dotfiles.git
 ```
 
+Install
+-----------
+To install vim/tmux/bash, use this helper script
+```console
+bash ./install.sh
+```
+
+
 Vim
 -----------
 ```console
@@ -21,7 +29,7 @@ $ ln -sf $HOME/dotfiles/local/vimrc_local.home.ubuntu $HOME/.vimrc_local
 Tmux
 ----------
 ```console
-$ ln -sf $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+$ ln -sf $HOME/dotfiles/tmux.conf $HOME/.tmux.conf
 $ ln -s $HOME/dotfiles/tmux $HOME/.tmux
 ```
 
