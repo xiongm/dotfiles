@@ -22,8 +22,6 @@ echo "Running configuration, preparing to compile vim"
   --enable-rubyinterp=yes \
   --enable-pythoninterp=yes \
   --with-python-config-dir=/usr/lib/python2.7/config* \
-  --enable-perlinterp=yes \
-  --enable-luainterp=yes \
   --enable-gui=gtk2 \
   --enable-cscope \
   --prefix=/usr
