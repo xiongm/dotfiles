@@ -22,6 +22,11 @@ install_dot_file .tmux.conf tmux.conf
 install_dot_file .tmux tmux
 install_dot_file .bash bash
 
+source_str="source ~/dotfiles/bashrc"
+if !(grep -Fxq "$source_str" ~/.bashrc); then
+ echo $source_str >> ~/.bashrc
+fi
+
 # emacs configs are not very actively maitnained
 # so not enable it for now
 #install_dot_file .emacs emacs
