@@ -17,6 +17,7 @@ function install_dot_file() {
 }
 
 install_dot_file .vimrc vimrc
+ln -sf ~/dotfiles/local/vimrc_local ~/.vimrc_local
 install_dot_file .vim vim
 install_dot_file .tmux.conf tmux.conf
 install_dot_file .tmux tmux
