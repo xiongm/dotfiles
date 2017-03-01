@@ -155,6 +155,7 @@ nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 :command! Compile :YcmDiags
 :command! FixIt :YcmCompleter FixIt
+:command! Type :YcmCompleter GetType
 
 "open definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
