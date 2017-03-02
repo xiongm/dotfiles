@@ -1,6 +1,7 @@
 " This is the main plugin list, sourced by modules/plugins.vim
 " Configuration goes in the appropriate modules/plugins/*.vim file.
 
+Plug 'ervandew/supertab'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -16,7 +17,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-fugitive'
 "Extra steps to get this plugin to work
 "1.Install node and npm
-" 1.1sudo apt-get install npm 
+" 1.1sudo apt-get install npm
 "2.Install tern with npm
 " 2.1 cd .vim/plugged/tern_for_vim && npm install
 "3.Make a soft link to node. Tern uses node
@@ -40,7 +41,6 @@ Plug 'Raimondi/delimitMate'
 "use <Leader>y, to trigger
 Plug 'mattn/emmet-vim'
 Plug 'kana/vim-altr'
-Plug 'ervandew/supertab'
 Plug 'mileszs/ack.vim'
 " ctags management
 " important notice
