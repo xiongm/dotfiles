@@ -25,6 +25,7 @@ install_dot_file .vim vim
 install_dot_file .tmux.conf tmux.conf
 install_dot_file .tmux tmux
 install_dot_file .bash bash
+install_dot_file .gitconfig gitconfig
 
 source_str="source ~/dotfiles/bashrc"
 if !(grep -Fxq "$source_str" ~/.bashrc); then
