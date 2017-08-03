@@ -13,12 +13,17 @@
   lg = log --stat
 
   a = add
+  # log with commit graph for all branches
+  adog = log --all --decorate --oneline --graph
+  # log with commit graph for current branch
+  dog = log --decorate --oneline --graph
   ap = add -p
   c = commit --verbose
   ca = commit -a --verbose
   cm = commit -m
   cam = commit -a -m
-  m = commit --amend --verbose
+  last = !git show --summary `git merge-base develop HEAD`
+  amend = commit --amend --verbose
 
   d = diff
   dt = difftool
@@ -42,5 +47,6 @@
   po=!echo 'Ah push it' && git push origin && echo 'PUSH IT REAL GOOD'
 
   undo-commit = reset --soft HEAD~1
+  up = pull --rebase
 [include]
   path = ~/.gitconfig_local
