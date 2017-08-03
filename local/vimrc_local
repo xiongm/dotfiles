@@ -1,5 +1,8 @@
 " By default, ycm is turned off. comment these two lines
 " once you got it built and configured properly
 " turn on and off ycm syntastic checker and ycm itself
-let g:loaded_youcompleteme = 0
+"let g:loaded_youcompleteme = 0
 let g:ycm_register_as_syntastic_checker = 0
+set path+=/home/mxiong/cat/src
+
+let g:syntastic_cpp_include_dirs = ['/home/mxiong/cat/src']
