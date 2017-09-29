@@ -1,5 +1,6 @@
-read -p "This operation will replace existing vim, type 'y' to continue:" answer
-if [[ $answer != 'y' ]]; then
+echo -e "This operation will replace existing vim, continue? (y/n) \c"
+read
+if [[ $REPLY != 'y' ]]; then
  exit 0
 fi
 set -x
@@ -32,6 +33,9 @@ cd vim
 
 echo "Compiling vim"
 make && sudo make install
+if [[ $? -ne 0 ]]; then
+  echo "Build failed"
+fi
 cd ../..
 echo "Cleanup..."
 rm -fr build
