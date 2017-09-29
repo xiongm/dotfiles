@@ -16,6 +16,17 @@ function install_dot_file() {
   fi
 }
 
+function check_install() {
+  if ! which $1 > /dev/null; then
+    echo "Looks like '$1' is not installed"
+    exit -1
+  fi
+}
+
+check_install git
+check_install make
+
+
 install_dot_file .vimrc vimrc
 
 if [[ ! -L ~/.vimrc_local ]]; then
