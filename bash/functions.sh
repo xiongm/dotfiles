@@ -40,3 +40,8 @@ function add_pub_key {
    cat ~/.ssh/*.pub | ssh $1 sh -c 'cat - >> .ssh/authorized_keys'
   fi
 }
+
+function set_iterm2_title {
+  local mode=$1;shift
+  echo -ne "\e]1;$mode\a"
+}
