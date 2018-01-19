@@ -49,6 +49,14 @@ ruby omni completion (requires vim-ruby) => Ctrl-X Ctrl-O in i mode
 2.4 perform desired update, e.g. search and replace
 
 -----------------------------------------------------------------------
+-                  SERACH AND REPLACE                                 -
+-----------------------------------------------------------------------
+1. find and replace on wildcard string
+ e.g field.body.symbol() -> field.symbol
+ use %s/field\(\w\+\)()/\1/
+
+
+-----------------------------------------------------------------------
 -                  OTHER USEFUL OPERATIONS                            -
 -----------------------------------------------------------------------
 1.copy from system clipboard

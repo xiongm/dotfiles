@@ -3,6 +3,10 @@ let mapleader=","
 
 nnoremap n nzz
 
+"always use the last yanked txt
+"to do paste
+xnoremap <leader>p "_dP
+
 "unmap Q currently mapped to ex mode
 "its very annoying
 map Q <Nop>
