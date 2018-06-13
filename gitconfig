@@ -24,6 +24,7 @@
   cam = commit -a -m
   last = !git show --summary `git merge-base develop HEAD`
   amend = commit --amend --verbose
+  difffiles = diff --name-only
 
   d = diff
   dt = difftool
