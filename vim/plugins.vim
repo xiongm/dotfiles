@@ -47,9 +47,6 @@ Plug 'mileszs/ack.vim'
 " if no tags need to be generated
 " touch a .notags file in the root
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'Shougo/vimproc.vim',{ 'do': 'make' }
-"Plug 'Shougo/neocomplete.vim'
-"Plug 'Shougo/neoinclude.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-dispatch'
