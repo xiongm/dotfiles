@@ -23,6 +23,7 @@ join line below to current line => J
 in NORMAL mode, go to the next line => o
 end of file => G
 beginning of file => gg
+split window evenly => Ctrl + W Ctrl + =
 
 -----------------------------------------------------------------------
 -                          CODE COMPLETION                            -

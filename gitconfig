@@ -51,5 +51,6 @@
 
   undo-commit = reset --soft HEAD~1
   up = pull --rebase
+  url = config --get remote.origin.url
 [include]
   path = ~/.gitconfig_local

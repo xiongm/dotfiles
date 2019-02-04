@@ -1,0 +1,9 @@
+#!/usr/bin/expect -f
+set timeout -1
+spawn ssh hostname
+expect "Verification code:"
+#send -- "stuff\r"
+interact -o "\r" return
+expect "Password:"
+send -- "$SECRETE_INFO\r"
+interact
