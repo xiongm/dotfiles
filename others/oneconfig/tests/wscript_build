@@ -1,0 +1,10 @@
+py_inc='../../.. .. .'
+
+for src in [
+  'line_parser_ut.py',
+  'oneconfig_ut.py'
+]:
+  bld.py3test(
+    source = src,
+    python_includes = py_inc
+  )
