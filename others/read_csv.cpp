@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
 struct Data
 {
   string symbol;
@@ -52,9 +51,8 @@ public:
           double price;
           bool is_open;
           getline(iss, symbol, ',');
-          iss.ignore();
           iss >> price;
-          iss.ignore();
+          iss.ignore(numeric_limits<streamsize>::max(), ',');
           iss >> is_open;
           data_.emplace_back(symbol, price, is_open);
         }
