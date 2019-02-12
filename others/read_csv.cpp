@@ -1,9 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <fstream>
-#include <string> 
-#include <sstream>
-#include <tuple>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -26,8 +21,7 @@ struct Data
   }
 };
 
-typedef tuple<string, double, bool> my_tuple;
-
+using my_tuple=tuple<string, double, bool>;
 
 ostream & operator<<(ostream & os, const my_tuple & data)
 {

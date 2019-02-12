@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <iterator>
-#include <sstream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -84,8 +81,8 @@ int main(int argc, char *argv[])
             std::string line;
             getline(cin, line);
             auto it = begin(inputs[i]);
-            istringstream ss(line);
-            while (getline(ss, line, ','))
+            istringstream is(line);
+            while (getline(is, line, ','))
             {
               int x;
               istringstream(line) >> x;
