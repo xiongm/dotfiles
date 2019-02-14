@@ -29,11 +29,16 @@
   Note: existing allocated port numbers are only guaranteed to conform to rule #2 due to oversight,
   human error, port deletion etc,etc. The solution should follow required rules regardless
 
+  Requires boost/gtest to build
+
   Built with gcc 4.8.1:
   g++ ./allocate_ports.cpp --std=c++11 -I/usr/local/boost/boost_1_57_0/include/ -I/usr/local/gtest/gtest/include -L /usr/local/gtest/gtest/lib -lgtest -pthread -o ./allocate_ports
 
   For use in canada trc
   ./allocate_ports --max-sessions-per-manager=4 [input file pipelined from db] [new session #]
+
+  Build for unittest
+  g++ ./allocate_ports.cpp -g -O2 --std=c++0x -D__UNITTEST__ -I/opt/libc++/boost/1.64.0/include -I/opt/libstdc++/gtest/1.8.0/include -L /opt/libc++-sanitizer/gtest/1.8.0/lib -lgtest -pthread -fPIC -o ./allocate_ports
 
   algorithm overview:
   1. Initialize a array of Port_Tile of size m, each representing a session manager and has the following info:
