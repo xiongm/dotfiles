@@ -115,6 +115,9 @@ struct Ports_Tile
   uint32_t start;
 };
 
+template <typename T, typename Comp>
+using MyPq = priority_queue<T, vector<T>, Comp>;
+
 auto  allocate_ports(const vector<uint32_t> & current_ports, int num, const Options & options) 
   -> typename remove_const<remove_reference<decltype(current_ports)>::type>::type
 {
@@ -131,7 +134,7 @@ auto  allocate_ports(const vector<uint32_t> & current_ports, int num, const Opti
     // port tile with less ports taken first
     return lhs.buckets.count() > rhs.buckets.count();
   };
-  priority_queue<Ports_Tile, vector<Ports_Tile>, decltype(compare)> pq(compare);
+  MyPq<Ports_Tile, decltype(compare)> pq(compare);
 
   vector<Ports_Tile> tiles;
   for (decltype(options.num_of_managers) i = 0; i < options.num_of_managers; ++i)
