@@ -11,6 +11,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="awesome-patched"
 # run > p10k configure if you want to configure
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND=187
 
 export EDITOR=vim
 
@@ -35,6 +36,7 @@ then
 fi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=008, bold'
+
 
 # Load Git completion
 zstyle ':completion:*:*:git:*' script ~/dotfiles/zsh/git-completion.bash
