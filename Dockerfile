@@ -1,3 +1,8 @@
+# To Build
+# > docker build - < ./Dockerfile --no-cache -t mydockertest
+# To Run
+# > docker run -it mydockertest:latest
+
 FROM ubuntu:18.04
 
 ENV HOME /root
