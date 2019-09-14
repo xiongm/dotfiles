@@ -5,12 +5,7 @@
 
 function install_dot_file() {
   echo "Installing $1"
-  link = `readlink -m ~/$1`
-  if test "$?"; then
-    echo "something wrong about readlink"
-    exit -1
-  fi
-  if [[ $link == ~/dotfiles/$2 ]]; then
+  if [[ `readlink -m ~/$1` == ~/dotfiles/$2 ]]; then
     echo "$1 already installed"
   else
     if [[ -e ~/$1 ]]; then
