@@ -43,6 +43,12 @@ if !(grep -Fxq "$source_str" ~/.bashrc); then
  echo $source_str >> ~/.bashrc
 fi
 
+source_str="source ~/dotfiles/zsh/zshrc"
+if !(grep -Fxq "$source_str" ~/.zshrc); then
+ echo $source_str >> ~/.zshrc
+fi
+
+
 # emacs configs are not very actively maitnained
 # so not enable it for now
 #install_dot_file .emacs emacs
