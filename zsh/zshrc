@@ -14,6 +14,16 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
+for script in ~/.zsh/*.sh
+do
+  [ -x "$script" ] || continue
+  source $script
+done
+
+if [ -e ~/.zshrc_local ]
+then
+  source ~/.zshrc_local
+fi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=008, bold'
 
