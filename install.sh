@@ -40,11 +40,12 @@ install_dot_file .zsh zsh
 install_dot_file .gitconfig gitconfig
 
 source_str="source ~/dotfiles/bashrc"
+source_str="[[ -f ~/dotfiles/bashrc ]] && source ~/dotfiles/bashrc"
 if !(grep -Fxq "$source_str" ~/.bashrc); then
  echo $source_str >> ~/.bashrc
 fi
 
-source_str="source ~/dotfiles/zsh/zshrc"
+source_str="[[ -f ~/dotfiles/zsh/zshrc ]] && source ~/dotfiles/zsh/zshrc"
 if !(grep -Fxq "$source_str" ~/.zshrc); then
  echo $source_str >> ~/.zshrc
 fi
