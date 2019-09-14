@@ -6,6 +6,8 @@
 FROM ubuntu:18.04
 
 ENV HOME /root
+ENV TERM xterm-256color
+
 WORKDIR $HOME
 
 RUN apt-get update \
