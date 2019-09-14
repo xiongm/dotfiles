@@ -9,6 +9,7 @@ ZSH_THEME="bira"
 # refer to https://gist.github.com/kevin-smets/8568070
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="awesome-patched"
+# run > p10k configure if you want to configure
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 export EDITOR=vim
