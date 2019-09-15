@@ -25,8 +25,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
-
+#source $ZSH/oh-my-zsh.sh
 
 for script in ~/.zsh/*.sh
 do
@@ -43,7 +42,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=008, bold'
 
 
 # Load Git completion
-zstyle ':completion:*:*:git:*' script ~/dotfiles/zsh/git-completion.bash
-fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/dotfiles/zsh/completions/git-completion.bash
+fpath=(~/.zsh/completions $fpath)
+# remove duplidates from fpath
+typeset -aU fpath
 
 autoload -Uz compinit && compinit
