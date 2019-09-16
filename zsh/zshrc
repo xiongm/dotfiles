@@ -19,10 +19,13 @@ POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND=187
 
 export EDITOR=vim
 
+# install kubectx (brew install kubectx) for some
+# kube aliases
 plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
